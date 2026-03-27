@@ -235,7 +235,7 @@ pointer-events:none;
 
 <!-- welcome -->
 <section class="card active">
-<h1>I Belongs to You</h1>
+<h1>Hi, My Soulmate!</h1>
 <p>I Made something special. <br>But you have to unlock it.</p>
 <button onclick="next()">Unlock</button>
 </section>
@@ -268,7 +268,7 @@ pointer-events:none;
 <div id="options"></div>
 
 <div class="score-box">
-Points: <span id="score">0</span> / 3
+Points: <span id="score">0</span> / 5
 </div>
 
 <p id="feedback"></p>
@@ -277,7 +277,7 @@ Points: <span id="score">0</span> / 3
 <!-- final -->
 <section class="card">
 
-<h1>Between Us in Paris</h1>
+<h1> Our Love Journey</h1>
 
 <div class="lovebox">
 <div class="timer-title">TIME WITH YOU</div>
@@ -324,7 +324,7 @@ function next(){
 ================================================= */
 
 let pinInput = '';
-const correctPin = '1506';
+const correctPin = '1202';
 const pinDisplay = document.getElementById("pin");
 
 function renderDots(){
@@ -372,9 +372,11 @@ function checkPin(){
 ================================================= */
 
 const questions=[
-{q:"When did we first meet?", options:["January","February","March"],correct:1},
-{q:"What do I do when I miss you?", options:["Sleep","Text you","Pretend I'm fine"],correct:1},
-{q:"Who loves harder?", options:["You","Me","Both"],correct:2}
+{q:"Kapan sih kita pertama ketemu?", options:["26 mar","17 agustus","18 feb"],correct:2},
+{q:"Siapa yang cintanya lebih besar?", options:["aku","jokowi","both"],correct:2},
+{q:"Kenapa kita pacaran?", options:["karena cinta","karena bakso itu bulat","karena prabowo cinta sawit"],correct:0},
+{q:"siapa yang paling alay?", options:["furab","hawson","bahlil"],correct:1},
+{q:"Kenapa aku sayang kamu? ", options:["karena aku wni","karena aku tinggi","karena aku hawson"],correct:2}
 ];
 
 let currentQ = 0;
@@ -439,7 +441,7 @@ function checkAnswer(i,btn){
 
 function startTimer(){
 
-    const start = new Date("2025-02-28T00:00:00");
+    const start = new Date("2025-02-18T00:00:00");
 
     setInterval(()=>{
 
@@ -468,13 +470,21 @@ function revealMemory(el){
     alreadyRevealed = true;
 
     el.innerHTML = `
-        <img src="pict.jpg"
+        <img src="pict.JPG"
         style="width:100%;height:100%;object-fit:cover;border-radius:18px">
     `;
 
     const text = `
-      The rain fell quietly, blurring the world until it felt like there was only you and me, two hearts finding each other in the middle of the storm, realizing that love doesn’t always arrive loudly—sometimes it comes as soft as rain, and stays.
-    `;
+    sayang, ketemu kamu itu beneran bikin aku bersyukur, aku gatau lagi kalau tahun lalu aku gak ketemu kamu, gak kenal sama orang kayak kamu... mungkin aja aku bakalan jadi orang ter galau di bumi?¿ *asli bos gabohong*
+
+aku bener-bener berterimakasih atas semua yang kamu kasih ke aku, kasih sayangnya kamu, waktunya kamu, cintanya kamu, atensinya kamu, dan semua muanya. 
+
+terimakasih juga udah mau bertahan sama aku disaat kita dikasih banyak problem, udah mau sabar sama kelakuan aku yang kadang nyebelin [banget], terimakasih karena udah selalu milih aku ya? it's really mean to me.
+
+aku sayang banget sama kamu, aku harap kamu gak bakal bosen kalau aku ngasih tau hal ini berkali-kali ke kamu ya, karena aku emang beneran sesayang itu sama kamu...
+
+makasih yaa, udah mau stay by my side waktu aku lagi happy ataupun sedih. i hope that in the future we'll continue to be 2gether ✌🏻 kkay? semoga masih ada kita di tahun-tahun berikutnya yap! don't forget that i always love you, my soulmate.
+       `;
 
     const paragraphs = text.split("\n\n");
 
@@ -489,7 +499,7 @@ function revealMemory(el){
     function typeParagraph(){
 
         if(p>=paragraphs.length){
-            sign.innerHTML="Sincerely<br> K";
+            sign.innerHTML="Sincerely<br> Me";
             return;
         }
 
